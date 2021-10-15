@@ -1,14 +1,32 @@
 {
   "event_links": [
     {
-      "name": "BookTracker App | For Flutter",
-      "color": "dark",
+      "name": "Event 1",
+      "color": "primary",
       "href": "https://github.com/gdsc-jssstu/booktracker-app",
       "type": "reference"
     },
     {
-      "name": "Git Set Code | YouTube Live",
+      "name": "Event 2",
       "color": "danger",
+      "href": "https://github.com/gdsc-jssstu/booktracker-app",
+      "type": "reference"
+    },
+    {
+      "name": "Event 3",
+      "color": "success",
+      "href": "https://youtu.be/0NwnkZ-nJ9M",
+      "type": "live-event"
+    },
+    {
+      "name": "Event 4",
+      "color": "warning",
+      "href": "https://github.com/gdsc-jssstu/booktracker-app",
+      "type": "reference"
+    },
+    {
+      "name": "Event 5",
+      "color": "info",
       "href": "https://youtu.be/0NwnkZ-nJ9M",
       "type": "live-event"
     }
