@@ -2,6 +2,7 @@ import './App.css';
 import DisplayLinks from "./containers/DisplayLinks";
 import Navbar from "./containers/Navbar";
 import React, { useState } from 'react';
+import Confetti from 'react-confetti'
 
  
 function App() {
@@ -19,6 +20,7 @@ function App() {
   }
   return (
     <>
+      <Confetti recycle={false} numberOfPieces={200} />
       <Navbar mode={mode} toggleMode={toggleMode}/>
       <DisplayLinks mode={mode}/>
     </> 
