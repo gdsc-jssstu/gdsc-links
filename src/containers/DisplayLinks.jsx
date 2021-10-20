@@ -1,16 +1,35 @@
-import React, { useState } from "react";
-import { event_links } from "../data/event_links.json";
+import React, { useState, useEffect } from "react";
+import axios from "axios"; 
 
 function DisplayLinks() {
   //TODO: Would be used while adding filter feature
   //   const [displayEventLinks, setDisplayEventLinks] = useState(event_links);
-  const [displayEventLinks] = useState(event_links);
+  const [data, setData] = useState(null); 
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
+ 
+  useEffect(() => { 
+    axios(process.env.REACT_APP_LINKS_DATA) 
+      .then((response) => { 
+        setData(response.data); 
+      }) 
+      .catch((error) => { 
+        console.error("Error fetching data: ", error); 
+        setError(error); 
+      }) 
+      .finally(() => { 
+        setLoading(false); 
+      }); 
+  }, []); 
+ 
+  if (loading) return <div className="container my-5 text-center fw-bold">Loading...</div>; 
+  if (error) return "Error!"; 
 
   return (
     <div className="container my-3">
       <div className="row">
         <div className="col-md-7 mx-1 mx-md-auto">
-          {displayEventLinks.map((link) => (
+          {data.event_links.map((link) => (
             <div className={`mb-2`} key={"Link to - " + link.name}>
               <a
                 type="button"
