@@ -28,3 +28,7 @@
 .text-quicksand-medium {
   font-family: "Quicksand", sans-serif;
 }
+
+[type=button], [type=reset], [type=submit], button{
+  -webkit-appearance: none !important ;
+}
