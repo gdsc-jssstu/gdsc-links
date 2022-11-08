@@ -26,7 +26,7 @@
     },
     {
       "name": "Twitter",
-      "fontawesome-icon": "fa-brands fa-twitter fa-lg",
+      "fontawesome-icon": "fa-brands fa-twitter",
       "color": "text-primary",
       "href": "https://twitter.com/gdscjssstu"
     }
