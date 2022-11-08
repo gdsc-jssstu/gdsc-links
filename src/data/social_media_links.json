@@ -23,6 +23,12 @@
       "fontawesome-icon": "fas fa-envelope fa-lg",
       "color": "text-danger",
       "href": "mailto:dsc@jssstuniv.in"
+    },
+    {
+      "name": "Twitter",
+      "fontawesome-icon": "fa-brands fa-twitter fa-lg",
+      "color": "text-primary",
+      "href": "https://twitter.com/gdscjssstu"
     }
   ]
 }
