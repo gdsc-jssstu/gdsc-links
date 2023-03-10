@@ -8,7 +8,7 @@ function DisplayLinks() {
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null); 
  
-  async useEffect(() => { 
+  useEffect(async () => { 
     await axios.get(process.env.REACT_APP_LINKS_DATA) 
       .then((response) => { 
         setData(response.data); 
