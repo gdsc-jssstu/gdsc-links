@@ -12,7 +12,7 @@ function DisplayLinks() {
     axios.get("https://api.npoint.io/18ff90d12cad1df9272d") 
       .then((response) => { 
         setData(response.data); 
-        console.log("This is the data"+response.data);
+        console.log("This is the data"+process.env.REACT_APP_LINKS_DATA;
       }) 
       .catch((error) => { 
         console.error("Error fetching data: ", error); 
