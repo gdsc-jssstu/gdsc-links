@@ -9,7 +9,7 @@ function DisplayLinks() {
   const [error, setError] = useState(null); 
  
   useEffect(() => { 
-    axios.get("https://api.npoint.io/18ff90d12cad1df9272d") 
+    axios.get(process.env.REACT_APP_LINKS_DATA) 
       .then((response) => { 
         setData(response.data); 
         console.log("This is the data"+process.env.REACT_APP_LINKS_DATA);
