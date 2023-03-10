@@ -8,8 +8,8 @@ function DisplayLinks() {
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null); 
  
-  useEffect(async () => { 
-    const foo = await axios.get(process.env.REACT_APP_LINKS_DATA) 
+  useEffect(() => { 
+    axios.get(process.env.REACT_APP_LINKS_DATA) 
       .then((response) => { 
         setData(response.data); 
         console.log("This is the data"+response);
@@ -21,7 +21,6 @@ function DisplayLinks() {
       .finally(() => { 
         setLoading(false); 
       }); 
-    foo();
   }, []); 
  
   if (loading) return <div className="container my-5 text-center fw-bold">Loading...</div>; 
