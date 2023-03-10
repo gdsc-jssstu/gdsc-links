@@ -12,7 +12,7 @@ function DisplayLinks() {
     const foo = await axios.get(process.env.REACT_APP_LINKS_DATA) 
       .then((response) => { 
         setData(response.data); 
-        console.log("This is the data"+process.env.REACT_APP_LINKS_DATA);
+        console.log("This is the data"+response);
       }) 
       .catch((error) => { 
         console.error("Error fetching data: ", error); 
