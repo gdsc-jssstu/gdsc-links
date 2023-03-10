@@ -12,6 +12,7 @@ function DisplayLinks() {
     axios(process.env.REACT_APP_LINKS_DATA) 
       .then((response) => { 
         setData(response.data); 
+        console.log(response.data);
       }) 
       .catch((error) => { 
         console.error("Error fetching data: ", error); 
@@ -29,7 +30,7 @@ function DisplayLinks() {
     <div className="container my-3">
       <div className="row">
         <div className="col-md-7 mx-1 mx-md-auto">
-          {data.event_links.map((link) => (
+          {data?.event_links?.map((link) => (
             <div className={`mb-2`} key={"Link to - " + link.name}>
               <a
                 type="button"
